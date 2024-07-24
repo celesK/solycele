@@ -7,6 +7,10 @@
 <body>
     <header>
         <h1>Utilizar, reciclar, vivir más</h1>
+        <ul>
+            <li>botella de amor</li>
+            <!--acá pongan otros proyectos de reciclaje con el comando li-->
+        </ul>
     </header>
 </body>
 </html>
