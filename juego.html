@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - Reciclaje</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .faq-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+    }
+    .faq {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .faq-title {
+      font-size: 18px;
+      margin: 0;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #008cba;
+      color: white;
+      border-radius: 5px;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      padding: 0 10px;
+      background-color: #f0f0f0;
+    }
+    .faq-content p {
+      margin: 10px 0;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="faq-section">
+  <div class="faq">
+    <h3 class="faq-title">¿Qué materiales puedo reciclar?</h3>
+    <div class="faq-content">
+      <p>Los materiales que se pueden reciclar incluyen papel, cartón, vidrio, plástico, metales y desechos electrónicos. Verifica las normativas locales para más detalles.</p>
+    </div>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">¿Cómo afecta el reciclaje al medio ambiente?</h3>
+    <div class="faq-content">
+      <p>El reciclaje reduce la necesidad de extraer nuevos recursos naturales, disminuye la contaminación y ahorra energía. También ayuda a reducir la cantidad de basura en vertederos.</p>
+    </div>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">¿Cómo comenzar a reciclar en casa?</h3>
+    <div class="faq-content">
+      <p>Para empezar a reciclar en casa, separa los residuos en contenedores distintos para papel, plástico, vidrio y orgánicos. Asegúrate de limpiar los envases antes de reciclarlos.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const faqs = document.querySelectorAll(".faq-title");
+  
+  faqs.forEach(faq => {
+    faq.addEventListener("click", function() {
+      const content = this.nextElementSibling;
+      
+      // Toggle active class for accordion effect
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
