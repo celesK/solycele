@@ -13,6 +13,59 @@
       color: #333;
     }
 
+    /* Estilos para la barra de menú */
+    nav {
+      background-color: #2ecc71;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #27ae60;
+    }
+
+    /* Estilos para el submenú */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 40px;
+      background-color: #27ae60;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li a {
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    nav ul li ul li a:hover {
+      background-color: #1e8449;
+    }
+
     /* Título principal */
     header {
       background-color: #2ecc71;
@@ -162,8 +215,26 @@
 </head>
 <body>
 
+  <!-- Barra de menú -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="https://www.un.org/es/actnow/cleanourplanet">¿Qué pasa en el mundo?</a></li>
+      <li>
+        <a href="#">Proyectos de reciclaje</a>
+        <ul>
+          <li><a href="#botellas">Botellas</a></li>
+          <li><a href="#telas">Telas</a></li>
+          <li><a href="#pilas">Pilas</a></li>
+        </ul>
+      </li>
+      <li><a href="#puntos-verdes">Puntos Verdes</a></li>
+      <li><a href="#nosotras">Nosotras</a></li>
+    </ul>
+  </nav>
+
   <!-- Título principal -->
-  <header>
+  <header id="inicio">
     <h1>Luchando Contra la Contaminación a Través del Reciclaje</h1>
   </header>
 
